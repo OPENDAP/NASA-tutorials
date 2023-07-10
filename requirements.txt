@@ -6,7 +6,7 @@ netCDF4
 xarray
 pydap
 matplotlib
-cartopy
+# cartopy
 numpy
 earthaccess
 jupyter
