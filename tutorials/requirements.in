@@ -1,0 +1,11 @@
+# Process this file with pip-compile to build a requirements.txt file
+# that can be used with 'pip install -r requirements.txt' in a virtual
+# environment or by binder.
+
+netCDF4
+xarray
+matplotlib
+cartopy
+numpy
+earthaccess
+jupyter
