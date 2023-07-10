@@ -74,20 +74,12 @@ web browser. In the terminal, start jupyter:
 
 	jupyter notebook
 
-### The notebooks...
+### The notebooks
 
-## Notes
+NASA_EDL_Login.ipynb		All about Earthdata Login
+netcdf_tutorial.ipynb		Using the NetCDF4 library to read data
+xarray_netcdf_tutorial.ipynb	Use Xarray with NetCDF4
+pydap_dap4_basic.ipynb		Using PyDAP to read data
 
-### 7/7/23
-
-There are serious problems with the netcdf-c library version 4.9.1 and
-4.9.2 that have broken EDL authentication. 4.9.0 does work, but trying
-to use that with a conda env was just too hard. 
-
-I switched to the python venv system and installed packages using pip
-which, via stroke of good fortune, worked. 
-
-### 7/10/23
-
-I added pip-tools so that requirements.in --> requirements.txt works.
-This should streamline running the notebooks using binder.
+----
+Copyright (C) 2023 OPeNDAP, Inc. This Jupyter Notebook is made available under the Creative Commons Attribution license 4.0.
