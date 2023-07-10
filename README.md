@@ -39,7 +39,7 @@ case by default, so this step might not be needed.
 
 	conda activate nasa-tutorials
 
-## Using Pip
+### Using Pip
 
 Perform these steps in a terminal window
 
@@ -66,6 +66,15 @@ For the xarray/netcdf notebook, add
 For the pydap notebook(s), add
 	
 	pip install pydap
+
+## Using the notebooks
+
+Run `jupyter` and the notebooks will appear in your running/default
+web browser. In the terminal, start jupyter:
+
+	`jupyter notbook`
+
+### The notebooks...
 
 ## Notes
 
