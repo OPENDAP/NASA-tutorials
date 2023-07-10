@@ -22,20 +22,20 @@ If you already use conda, this is a simple way forward.
 
 Perform these steps in a terminal window
 
-- Change to this directory in the terminal
+Change to this directory in the terminal
 
 	cd .../NASA-tutorials
 
-- Start conda so the '(base)' environment is active. That may be the
+Start conda so the '(base)' environment is active. That may be the
 case by default, so this step might not be needed.
 
 	conda activate
 
-- Build the virtual environment for the tutorials
+Build the virtual environment for the tutorials
 
 	conda env create -f environment.yml
 
-- After a few minutes, activate the new environment
+After a few minutes, activate the new environment
 
 	conda activate nasa-tutorials
 
@@ -43,16 +43,16 @@ case by default, so this step might not be needed.
 
 Perform these steps in a terminal window
 
-- Change to this directory in the terminal
+Change to this directory in the terminal
 
 	cd .../NASA-tutorials
 
-- Set up a python virtual environment
+Set up a python virtual environment
 
 	python3 -m venv myenv		# make the virtual env
 	source myenv/bin/activate	# use it in the current shell
 
-- Then install packages. 
+Then install packages. 
 
 	pip install netCDF4
 	pip install matplotlib cartopy numpy jupyter earthaccess
@@ -72,7 +72,7 @@ For the pydap notebook(s), add
 Run `jupyter` and the notebooks will appear in your running/default
 web browser. In the terminal, start jupyter:
 
-	`jupyter notbook`
+	jupyter notebook
 
 ### The notebooks...
 
