@@ -1,0 +1,13 @@
+# run: conda env create --file environment.yml
+name: nasa-tutorial
+dependencies:
+- python>=3.9
+- matplotlib
+- earthaccess
+- jupyter
+- cartopy
+- pip
+- pip:
+  - netCDF4
+  - xarray
+  - pydap
