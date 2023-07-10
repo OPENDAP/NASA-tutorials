@@ -4,6 +4,7 @@
 
 netCDF4
 xarray
+pydap
 matplotlib
 cartopy
 numpy
