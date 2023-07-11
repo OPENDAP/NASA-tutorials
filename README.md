@@ -56,20 +56,9 @@ Set up a python virtual environment
 	python3 -m venv myenv		# make the virtual env
 	source myenv/bin/activate	# use it in the current shell
 
-Then install packages. 
+Then install packages.
 
-	pip install netCDF4
-	pip install matplotlib cartopy numpy jupyter earthaccess
-
-This gets an env that enables the plain netcdf notebook.
-
-For the xarray/netcdf notebook, add
-
-	pip install xarray
-
-For the pydap notebook(s), add
-	
-	pip install pydap
+    pip3 install -r requirements.txt
 
 ## Using the notebooks
 
