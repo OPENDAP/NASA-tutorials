@@ -1,6 +1,6 @@
 # Jupyter Notebook Tutorials Demonstrating Access to NASA Data
 
-These notebooks deonstrate how to read data from OPeNDAP servers
+These notebooks demonstrate how to read data from OPeNDAP servers
 hosted by NASA. There are twelve DAACs (Distributed Active Archive
 Centers) run by NASA and ten of those provide at least one OPeNDAP
 access point. In addition, NASA's Earthdata Cloud system also provides
@@ -10,11 +10,15 @@ service, both in the cloud and running on an on-premises server.
 
 ## Setup
 
-Either Conda or Pip may be used to create a virutal environment that
+Either Conda or Pip may be used to create a virtual environment that
 can run these notebooks. Using a virtual environment is a good idea -
 it's only tiny bit more work than not and it can save much time by not
 changing the native collection of packages bundled with you computer
 (or that you use for other work).
+
+Compatibility note: For OSX, the conda environment.yml file works for 
+the older (intel) computers, but not for the Macs that use the M1/M2 chips.
+For the M1/M2 Macs, use the Python venv and Pip based install.
 
 ### Using Conda
 
@@ -76,10 +80,10 @@ web browser. In the terminal, start jupyter:
 
 ### The notebooks
 
-NASA_EDL_Login.ipynb		All about Earthdata Login
-netcdf_tutorial.ipynb		Using the NetCDF4 library to read data
-xarray_netcdf_tutorial.ipynb	Use Xarray with NetCDF4
-pydap_dap4_basic.ipynb		Using PyDAP to read data
+* NASA_EDL_Login.ipynb		All about Earthdata Login
+* netcdf_tutorial.ipynb		Using the NetCDF4 library to read data
+* xarray_netcdf_tutorial.ipynb	Use Xarray with NetCDF4
+* pydap_dap4_basic.ipynb	Using PyDAP to read data
 
 ----
 Copyright (C) 2023 OPeNDAP, Inc. This Jupyter Notebook is made available under the Creative Commons Attribution license 4.0.
