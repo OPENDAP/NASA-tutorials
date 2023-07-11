@@ -12,6 +12,8 @@ service, both in the cloud and running on an on-premises server.
 
 ### Use Binder
 
+_Experimental!_
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/HEAD)
 
 ### Running the notebooks locally
@@ -49,8 +51,7 @@ After a few minutes, activate the new environment
 
 	conda activate nasa-tutorials
 
-####
- Using Pip
+#### Using Pip
 
 Perform these steps in a terminal window
 
