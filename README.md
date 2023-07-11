@@ -10,6 +10,12 @@ service, both in the cloud and running on an on-premises server.
 
 ## Setup
 
+### Use Binder
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/HEAD)
+
+### Running the notebooks locally
+
 Either Conda or Pip may be used to create a virtual environment that
 can run these notebooks. Using a virtual environment is a good idea -
 it's only tiny bit more work than not and it can save much time by not
@@ -20,7 +26,7 @@ Compatibility note: For OSX, the conda environment.yml file works for
 the older (intel) computers, but not for the Macs that use the M1/M2 chips.
 For the M1/M2 Macs, use the Python venv and Pip based install.
 
-### Using Conda
+#### Using Conda
 
 If you already use conda, this is a simple way forward.
 
@@ -43,7 +49,8 @@ After a few minutes, activate the new environment
 
 	conda activate nasa-tutorials
 
-### Using Pip
+####
+ Using Pip
 
 Perform these steps in a terminal window
 
