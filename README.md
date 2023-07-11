@@ -71,16 +71,32 @@ Then install packages.
 ## Using the notebooks
 
 Run `jupyter` and the notebooks will appear in your running/default
-web browser. In the terminal, start jupyter:
+web browser. If you are using Binder, the notebooks will open in jupyter lab
+in your browser. For local virtual environments, in the terminal, start jupyter:
 
 	jupyter notebook
 
 ### The notebooks
 
-* NASA_EDL_Login.ipynb		All about Earthdata Login
-* netcdf_tutorial.ipynb		Using the NetCDF4 library to read data
-* xarray_netcdf_tutorial.ipynb	Use Xarray with NetCDF4
-* pydap_dap4_basic.ipynb	Using PyDAP to read data
+* NASA_EDL_Login.ipynb		_All about Earthdata Login_ Run this to learn how to enable
+the opendap server to access data NASA serves that requires a username and password. Once
+you have run this notebook, the remain three listed here should work with and you should
+not have to authenticate again.
+
+* netcdf_tutorial.ipynb		_Using the NetCDF4 library to read data_ Read and plot data
+from the NASA Hyrax in the cloud server. 
+
+* xarray_netcdf_tutorial.ipynb	_Use Xarray with NetCDF4_ Read the same dataset as before,
+but use Xarray's interface. The package has many plotting options and also supports parallel
+access to data, although those features are beyond the scope of this tutorial. Under the hood,
+Xarray uses the NetCDF library by default.
+
+* pydap_dap4_basic.ipynb	_Using PyDAP to read data_ The PyDAP package provides an 
+alternative to the NetCDF library for access to data from OPeNDAP servers. 
+
+### About the notebooks
+
+
 
 ----
 Copyright (C) 2023 OPeNDAP, Inc. This Jupyter Notebook is made available under the Creative Commons Attribution license 4.0.
