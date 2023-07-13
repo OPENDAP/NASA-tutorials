@@ -14,7 +14,7 @@ service, both in the cloud and running on an on-premises server.
 
 _Experimental!_
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/main)
 
 ### Running the notebooks locally
 
