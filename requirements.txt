@@ -8,6 +8,5 @@ pydap
 numpy
 matplotlib
 cartopy
-basemap
 earthaccess
-jupyter
+jupyterlab
