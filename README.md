@@ -92,9 +92,5 @@ Xarray uses the NetCDF library by default.
 * pydap_dap4_basic.ipynb	_Using PyDAP to read data_ The PyDAP package provides an 
 alternative to the NetCDF library for access to data from OPeNDAP servers. 
 
-### About the notebooks
-
-
-
 ----
 Copyright (C) 2023 OPeNDAP, Inc. This Jupyter Notebook is made available under the Creative Commons Attribution license 4.0.
