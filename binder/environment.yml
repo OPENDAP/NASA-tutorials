@@ -11,6 +11,6 @@ dependencies:
 - cartopy
 - pydap
 - pip
-#- pip:
-#  - netCDF4
-#  - xarray
+- pip:
+  - netCDF4
+  - xarray
