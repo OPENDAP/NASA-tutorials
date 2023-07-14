@@ -30,3 +30,6 @@ attribute of the SST variable, e.g., is a string and not a number. using
 the netCDF library pulled in by xarray, the application of the scale factor 
 fails with an inscrutable error message about loops. The fix is to load netCDF
 4.9.3 or newer from pip.
+
+Here is a StackOverflow post about the error message: https://stackoverflow.com/
+questions/42013903/why-do-i-get-ufunc-multiply-did-not-contain-a-loop-with-signature-matching-ty
