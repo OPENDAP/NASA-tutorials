@@ -16,3 +16,14 @@ This should streamline running the notebooks using binder.
 
 Pulled this out of the larger collection of notebooks to focus on this
 jst about NASA's data and OPeNDAP servers.
+
+7/13/23
+
+Building a conda env using conda-forge and _not_ loading netCDf4 or xarray
+worked with Binder. THere was no need to use a pre-built container nor was
+there a need to separate the environment and content parts of the tutorials
+into two repos (might be later...). I loaded netCDF4 and xarray in via pip
+in the notebooks. 
+
+It _may_ be that loading only xarray results in a broken `values` method/field.
+Still TBD.
