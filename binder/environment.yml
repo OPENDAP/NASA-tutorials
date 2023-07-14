@@ -1,7 +1,4 @@
 # run: conda env create --file environment.yml
-#- pip:
-#  - netCDF4
-#  - xarray
 
 name: nasa-tutorials
 channels:
@@ -14,6 +11,6 @@ dependencies:
 - cartopy
 - pydap
 - pip
-- pip:
-  - netCDF4
-  - xarray
+#- pip:
+#  - netCDF4
+#  - xarray
