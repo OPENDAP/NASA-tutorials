@@ -8,8 +8,12 @@ channels:
   - conda-forge
 dependencies:
 - python>=3.9
+- dask
 - matplotlib
 - earthaccess
 - cartopy
 - pydap
 - pip
+- pip:
+  - netCDF4
+  - xarray

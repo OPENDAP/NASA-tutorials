@@ -1,9 +1,11 @@
 # run: conda env create --file environment.yml
+
 name: nasa-local
 channels:
   - conda-forge
 dependencies:
 - python>=3.9
+- dask
 - matplotlib
 - earthaccess
 - jupyterlab

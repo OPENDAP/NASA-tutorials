@@ -5,7 +5,7 @@
 netCDF4
 xarray
 pydap
-numpy
+dask
 matplotlib
 cartopy
 earthaccess
