@@ -25,5 +25,8 @@ there a need to separate the environment and content parts of the tutorials
 into two repos (might be later...). I loaded netCDF4 and xarray in via pip
 in the notebooks. 
 
-It _may_ be that loading only xarray results in a broken `values` method/field.
-Still TBD.
+Loading only xarray results in a broken `values` method/field. The scale_factor
+attribute of the SST variable, e.g., is a string and not a number. using 
+the netCDF library pulled in by xarray, the application of the scale factor 
+fails with an inscrutable error message about loops. The fix is to load netCDF
+4.9.3 or newer from pip.
