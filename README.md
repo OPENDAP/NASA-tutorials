@@ -12,7 +12,11 @@ service, both in the cloud and running on an on-premises server.
 
 ### Use Binder
 
+Binder from this repo:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/main)
+
+Binder from separate environment repo:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP//main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252FOPENDAP%252FNASA-tutorials%26urlpath%3Dlab%252Ftree%252FNASA-tutorials%252F%26branch%3Dmain)
 
 ### Running the notebooks locally
 
