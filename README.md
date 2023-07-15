@@ -17,7 +17,9 @@ Binder from this repo:
 
 Binder from separate environment repo:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/jupyter-binder/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252FOPENDAP%252FNASA-tutorials%26urlpath%3Dlab%252Ftree%252FNASA-tutorials%252Ftutorials%252F0.NASA_EDL_Login.ipynb%26branch%3Dmain)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/jupyter-binder/main?urlpath=git-pull?repo=https://github.com/OPENDAP/NASA-tutorials/main)
+
+?urlpath=git-pull?repo=<url-of-your-content-repo>
 
 ### Running the notebooks locally
 
