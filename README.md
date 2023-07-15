@@ -37,7 +37,28 @@ For the _colab_ versions of the notebooks, you may have to perform the authentic
 steps in each of the notebooks. This is because each notebook runs in a brand
 new environment. Thanks to Chris Battisto for providing these!
 
-### Step 1b: Running the notebooks locally
+### The notebooks
+
+* **NASA_EDL_Login.ipynb**		_All about Earthdata Login_ Run this to learn how to enable
+the opendap server to access data NASA serves that requires a username and password. Once
+you have run this notebook, the remain three listed here should work with and you should
+not have to authenticate again.
+
+* **netcdf_tutorial.ipynb**		_Using the NetCDF4 library to read data_ Read and plot data
+from the NASA Hyrax in the cloud server. 
+
+* **xarray_netcdf_tutorial.ipynb**	_Use Xarray with NetCDF4_ Read the same dataset as before,
+but use Xarray's interface. The package has many plotting options and also supports parallel
+access to data, although those features are beyond the scope of this tutorial. Under the hood,
+Xarray uses the NetCDF library by default.
+
+* **pydap_dap4_basic.ipynb**	_Using PyDAP to read data_ The PyDAP package provides an 
+alternative to the NetCDF library for access to data from OPeNDAP servers. 
+
+* **daac-tutorials**  _Notebooks from DAACs_ These are notebooks developed by people at
+the NASA DAACs and highlight some more interesting features of the NASA data systems.  
+
+### **Optional**: Running the notebooks locally
 
 Either Conda or Pip may be used to create a virtual environment that
 can run these notebooks. Using a virtual environment is a good idea -
@@ -112,26 +133,7 @@ Or
 
 `jupyter lab`
 
-### The notebooks
-
-* **NASA_EDL_Login.ipynb**		_All about Earthdata Login_ Run this to learn how to enable
-the opendap server to access data NASA serves that requires a username and password. Once
-you have run this notebook, the remain three listed here should work with and you should
-not have to authenticate again.
-
-* **netcdf_tutorial.ipynb**		_Using the NetCDF4 library to read data_ Read and plot data
-from the NASA Hyrax in the cloud server. 
-
-* **xarray_netcdf_tutorial.ipynb**	_Use Xarray with NetCDF4_ Read the same dataset as before,
-but use Xarray's interface. The package has many plotting options and also supports parallel
-access to data, although those features are beyond the scope of this tutorial. Under the hood,
-Xarray uses the NetCDF library by default.
-
-* **pydap_dap4_basic.ipynb**	_Using PyDAP to read data_ The PyDAP package provides an 
-alternative to the NetCDF library for access to data from OPeNDAP servers. 
-
-* **daac-tutorials**  _Notebooks from DAACs_ These are notebooks developed by people at
-the NASA DAACs and highlight some more interesting features of the NASA data systems.  
+Now go back to _**The notebooks**_.
 
 ### Extra
 
