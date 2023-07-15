@@ -12,14 +12,10 @@ service, both in the cloud and running on an on-premises server.
 
 ### Use Binder
 
-Binder from this repo:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/main)
 
-Binder from separate environment repo:
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/jupyter-binder/main?urlpath=git-pull?repo=https://github.com/OPENDAP/NASA-tutorials/main)
-
-?urlpath=git-pull?repo=<url-of-your-content-repo>
+Binder from separate environment repo: 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/jupyter-binder/main?urlpath=git-pull?repo=https://github.com/OPENDAP/NASA-tutorials)
 
 ### Running the notebooks locally
 
