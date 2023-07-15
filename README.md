@@ -37,7 +37,7 @@ For the _colab_ versions of the notebooks, you may have to perform the authentic
 steps in each of the notebooks. This is because each notebook runs in a brand
 new environment. Thanks to Chris Battisto for providing these!
 
-### The notebooks
+## The notebooks
 
 * **NASA_EDL_Login.ipynb**		_All about Earthdata Login_ Run this to learn how to enable
 the opendap server to access data NASA serves that requires a username and password. Once
@@ -58,7 +58,8 @@ alternative to the NetCDF library for access to data from OPeNDAP servers.
 * **daac-tutorials**  _Notebooks from DAACs_ These are notebooks developed by people at
 the NASA DAACs and highlight some more interesting features of the NASA data systems.  
 
-### **Optional**: Running the notebooks locally
+----
+## **Optional**: Running the notebooks locally
 
 Either Conda or Pip may be used to create a virtual environment that
 can run these notebooks. Using a virtual environment is a good idea -
@@ -121,7 +122,7 @@ Then install packages.
 
 `pip3 install -r requirements.txt`
 
-## Using the notebooks
+### Starting the local copy of the notebooks
 
 Run `jupyter` and the notebooks will appear in your running/default
 web browser. If you are using Binder, the notebooks will open in jupyter lab
