@@ -8,6 +8,7 @@ dependencies:
 - dask
 - matplotlib
 - earthaccess
+- jupyter
 - jupyterlab
 - cartopy
 - pydap
