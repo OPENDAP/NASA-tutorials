@@ -12,7 +12,7 @@ service, both in the cloud and running on an on-premises server.
 
 ### Step 0: Get a NASA Earthdata Login
 
-Go to [earthdata.nasa.gov](https://www.earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/earthdata-login) 
+Go to [urs.earthdata.nasa.gov](https://urs.earthdata.nasa.gov/) 
 and get a free Earthdata Login (EDL) account.
 
 Of course, if you already have an EDL account, use that.
@@ -31,7 +31,7 @@ open. That's it for the setup.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/main)
 
-Should the Binder environment fail for some reason, open the `colab_backup` directory
+Should the Binder environment fail for some reason, open the `colab` directory
 and run the tutorials using the environments based on [Colab](https://colab.google/).
 For the _colab_ versions of the notebooks, you may have to perform the authentication
 steps in each of the notebooks. This is because each notebook runs in a brand
