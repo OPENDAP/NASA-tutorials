@@ -1,3 +1,4 @@
+
 # Jupyter Notebook Tutorials Demonstrating Access to NASA Data
 
 These notebooks demonstrate how to read data from OPeNDAP servers
@@ -32,6 +33,8 @@ open. That's it for the setup.
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/main)
 
 ### Step 1b: Or Use Google Colab
+
+NOTE: You will need a Google login to Colab
 
 Should the Binder environment fail for some reason, open the `colab` directory
 and run the tutorials using the environments based on [Colab](https://colab.google/).
