@@ -18,7 +18,7 @@ and get a free Earthdata Login (EDL) account.
 Of course, if you already have an EDL account, use that.
 
 Either way, Keep your username and password handy, since we'll need to
-login to the Earthdata Cloud environment to access data in the notebooks.
+log in to the Earthdata Cloud environment to access data in the notebooks.
 
 ### Step 1: Use Binder
 
@@ -31,18 +31,20 @@ open. That's it for the setup.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/main)
 
+### Step 1b: Or Use Google Colab
+
 Should the Binder environment fail for some reason, open the `colab` directory
 and run the tutorials using the environments based on [Colab](https://colab.google/).
 For the _colab_ versions of the notebooks, you may have to perform the authentication
-steps in each of the notebooks. This is because each notebook runs in a brand
+steps in each of the notebooks. This is because each notebook runs in a
 new environment. Thanks to Chris Battisto for providing these!
 
 ## The notebooks
 
 * **NASA_EDL_Login.ipynb**		_All about Earthdata Login_ Run this to learn how to enable
-the opendap server to access data NASA serves that requires a username and password. Once
-you have run this notebook, the remain three listed here should work with and you should
-not have to authenticate again.
+the OPeNDAP server to access data NASA serves that requires a username and password. Once
+you have run this notebook, the remain three listed here should work without requiring another
+log in operation.
 
 * **netcdf_tutorial.ipynb**		_Using the NetCDF4 library to read data_ Read and plot data
 from the NASA Hyrax in the cloud server. 
@@ -63,7 +65,7 @@ the NASA DAACs and highlight some more interesting features of the NASA data sys
 
 Either Conda or Pip may be used to create a virtual environment that
 can run these notebooks. Using a virtual environment is a good idea -
-it's only tiny bit more work than not and it can save much time by not
+it's only tiny bit more work than not, and it can save much time by not
 changing the native collection of packages bundled with you computer
 (or that you use for other work).
 
