@@ -34,7 +34,7 @@ open. That's it for the setup.
 
 ### Step 1b: Or Use Google Colab
 
-NOTE: You will need a Google login to Colab
+NOTE: You will need a Google login to use Colab
 
 Should the Binder environment fail for some reason, open the `colab` directory
 and run the tutorials using the environments based on [Colab](https://colab.google/).
