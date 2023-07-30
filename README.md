@@ -27,10 +27,12 @@ NB: If you want to run the tutorial notebooks locally, skip to the
 next section (Running the notebooks locally).
 
 Click on the `Binder` badge and a browser window with the tutorials 
-running in Jupyter Lab (a fancier version of Jupyter notebook) should
-open. That's it for the setup.
+running in Jupyter should open. That's it for the setup.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/main)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/jupyter-binder/main?urlpath=git-pull?repo=https://github.com/OPENDAP/NASA-tutorials)
+
+**NOTE**: The above is an attempt to separate the content of the tutorial notebooks from the binder
+environment. See below under _Extra_ for an alternative way to run these notebooks using Binder.
 
 ### Step 1b: Or Use Google Colab
 
@@ -143,11 +145,13 @@ Now go back to _**The notebooks**_.
 
 ### Extra
 
-This is an attempt to separate the content of the tutorial notebooks from the binder
-environment. Not really working due to some odd authentication (jupyter, not EDL) problem.
+To run the notebooks in a binder environment as it's defined here, use the following 
+badge:
 
-Binder from separate environment repo: 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/jupyter-binder/main?urlpath=git-pull?repo=https://github.com/OPENDAP/NASA-tutorials)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/main)
+
+This environment may have a longer startup time than the environment accessed using the 
+link above in 'step 1.'
 
 ----
 Copyright (C) 2023 OPeNDAP, Inc. This Jupyter Notebook is made available under the Creative Commons Attribution license 4.0.
