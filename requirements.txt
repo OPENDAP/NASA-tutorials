@@ -2,11 +2,17 @@
 # that can be used with 'pip install -r requirements.txt' in a virtual
 # environment or by binder.
 
-netCDF4
-xarray
-pydap
-dask
-matplotlib
-cartopy
-earthaccess
-jupyterlab
+netCDF4==1.6.4
+xarray==2023.7.0
+
+pydap==3.4.0
+dask==2023.7.0
+matplotlib==3.7.2
+earthaccess==0.5.2
+cartopy==0.21.1
+pydap==3.4.0
+
+# jupyterlab
+# urllib3=1.26.15
+# jupyter #=1.0.0
+# nbgitpuller=1.1.1

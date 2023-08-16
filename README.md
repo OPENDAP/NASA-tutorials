@@ -29,7 +29,10 @@ next section (Running the notebooks locally).
 Click on the `Binder` badge and a browser window with the tutorials 
 running in Jupyter should open. That's it for the setup.
 
+<!--
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/jupyter-binder/main?urlpath=git-pull?repo=https://github.com/OPENDAP/NASA-tutorials)
+-->
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/main)
 
 **NOTE**: The above is an attempt to separate the content of the tutorial notebooks from the binder
 environment. See below under _Extra_ for an alternative way to run these notebooks using Binder.
