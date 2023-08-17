@@ -11,7 +11,7 @@ pydap==3.4.0
 dask==2023.7.0
 matplotlib==3.7.2
 earthaccess==0.5.2
-shapely==1.7.1
+shapely # ==1.7.1
 cartopy # ==0.21.1
 pydap==3.4.0
 
