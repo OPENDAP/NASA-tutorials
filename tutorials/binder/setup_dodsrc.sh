@@ -16,15 +16,15 @@ echo -n "Found an existing ~/.dodsrc file"
     edit_dodsrc=yes
     fi
 else
-echo "No ~/.dodsrc file"
-edit_dodsrc=yes
+    echo "No ~/.dodsrc file"
+    edit_dodsrc=yes
 fi
 
 if test $edit_dodsrc = "yes"
 then
-echo "HTTP.NETRC=$HOME/.netrc" >> ~/.dodsrc
-echo "HTTP.COOKIEJAR=$HOME/.dapcookies" >> ~/.dodsrc
-echo "Modified ~/.dodsrc"
+    echo "HTTP.NETRC=$HOME/.netrc" >> ~/.dodsrc
+    echo "HTTP.COOKIEJAR=$HOME/.dapcookies" >> ~/.dodsrc
+    echo "Modified ~/.dodsrc"
 else
-echo "The ~/.dodsrc file was not modified"
+    echo "The ~/.dodsrc file was not modified"
 fi
