@@ -11,11 +11,13 @@ dependencies:
 - cartopy
 - pydap
 - earthaccess
+- tqdm
 - dask
 - scipy
 - pip:
   - git+https://github.com/pydata/xarray.git
   - jupyter-contrib-nbextensions
-
+  - ipywidgets 
+  - widgetsnbextension
 
 
