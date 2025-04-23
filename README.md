@@ -1,3 +1,4 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/HEAD)
 
 # Jupyter Notebook Tutorials Demonstrating Access to NASA Data
 
@@ -24,7 +25,7 @@ next section (Running the notebooks locally).
 Click on the `Binder` badge and a browser window with the tutorials 
 running in Jupyter should open. That's it for the setup.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OPENDAP/NASA-tutorials/HEAD)
+
 
 ## The notebooks
 
