@@ -2,10 +2,11 @@
 
 # Jupyter Notebook Tutorials Demonstrating Access to NASA Data
 
-These notebooks demonstrate how to read data from OPeNDAP Hyrax data 
-servers hosted by NASA. There are twelve DAACs (Distributed Active Archive
-Centers) run by NASA and ten of those provide at least one OPeNDAP
-access point. 
+These notebooks demonstrate how to read data from OPeNDAP Hyrax data servers hosted by NASA. 
+Most of NASA's discipline-specific Distributed Active Archive Centers (DAACs) provide at least
+one OPeNDAP access point.
+
+
 ## Setup
 
 ### Step 0: Get a NASA Earthdata Login
