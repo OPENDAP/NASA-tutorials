@@ -5,3 +5,6 @@
 cpp-notebooks/cling_*
 
 stare/pystare/
+
+# Translations
+*.json
