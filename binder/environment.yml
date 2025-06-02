@@ -14,6 +14,7 @@ dependencies:
 - tqdm
 - dask
 - scipy
+- xoak
 - pip:
   - git+https://github.com/pydap/pydap.git
   - jupyter-contrib-nbextensions
