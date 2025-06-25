@@ -13,6 +13,7 @@ dependencies:
 - earthaccess
 - tqdm
 - dask
+- pandas
 - scipy
 - xoak
 - pip:
