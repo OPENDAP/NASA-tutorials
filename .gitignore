@@ -8,3 +8,6 @@ stare/pystare/
 
 # Translations
 *.json
+
+## any data
+*.nc
