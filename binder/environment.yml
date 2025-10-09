@@ -15,9 +15,9 @@ dependencies:
 - dask
 - pandas
 - scipy
+- pydap
 - xoak
 - pip:
-  - git+https://github.com/pydap/pydap.git
   - jupyter-contrib-nbextensions
   - ipywidgets 
   - widgetsnbextension
