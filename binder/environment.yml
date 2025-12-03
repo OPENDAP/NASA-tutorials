@@ -4,12 +4,11 @@ channels:
 dependencies:
 - pip
 - numpy
-- python = 3.11
+- python = 3.12
 - netCDF4
 - matplotlib
 - jupyterlab
 - cartopy
-# - xarray
 - earthaccess
 - tqdm
 - dask
@@ -17,8 +16,8 @@ dependencies:
 - scipy
 - xoak
 - pip:
-  - git+https://github.com/pydap/pydap.git
-  - git+https://github.com/Mikejmnez/xarray.git@pydap4_scale
+ - git+https://github.com/pydap/pydap.git
+ - git+https://github.com/pydata/xarray.git
   - jupyter-contrib-nbextensions
   - ipywidgets 
   - widgetsnbextension
