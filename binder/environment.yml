@@ -16,8 +16,8 @@ dependencies:
 - scipy
 - xoak
 - pip:
- - git+https://github.com/pydap/pydap.git
- - git+https://github.com/pydata/xarray.git
+  - git+https://github.com/pydap/pydap.git
+  - git+https://github.com/pydata/xarray.git
   - jupyter-contrib-nbextensions
   - ipywidgets 
   - widgetsnbextension
