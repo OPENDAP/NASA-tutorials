@@ -1,4 +1,4 @@
-name: Earthdata2025
+name: Earthdata2026
 channels:
 - conda-forge
 dependencies:
@@ -15,9 +15,9 @@ dependencies:
 - pandas
 - scipy
 - xoak
+- xarray = 2024.6.0
+- pydap = 3.5.9
 - pip:
-  - git+https://github.com/pydap/pydap.git
-  - git+https://github.com/pydata/xarray.git
   - jupyter-contrib-nbextensions
   - ipywidgets 
   - widgetsnbextension
