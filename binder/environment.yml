@@ -15,7 +15,7 @@ dependencies:
 - pandas
 - scipy
 - xoak
-- xarray = 2024.6.0
+- xarray = 2026.1
 - pydap = 3.5.9
 - pip:
   - jupyter-contrib-nbextensions
