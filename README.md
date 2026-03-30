@@ -30,22 +30,15 @@ running in Jupyter should open. That's it for the setup.
 
 ## The notebooks
 
-* **Get Started.ipynb**		
-_All about Earthdata Login_ Run this to create a local token object. Must have a
-an active EDL account. The token object will be used in other notebooks.
+The overall organization is:
 
-* **ECCOv4.ipynb**		
-_Uses pydap an xarray_ to aggregate an an entire collection of
-the ECCOv4 simulation. It uses the _Common Metadata Repository_ (CMR) to find cloud OPeNDAP URLs
-associated with the DOI of the data collection.
+* **binder/*.ipynb**: These demonstrate basic and most performant access to OPeNDAP data via PyDAP. These cover
+    * How to find OPeNDAP URLS
+    * How to Authenticate
+    * How to subset by variable names, time range, and coordinate values.
+    * How to best stream OPeNDAP dap4 responses into local NetCDF4 files.
 
-* **earthaccess.ipynb**	
-_Uses earthaccess to create a VirtualZarr from OPeNDAP DMR++ for Cloud
-data_. earthaccess uses the _Common Metadata Repository_ (CMR) to query all dataset by their
-short name.
-
-* **on-premOPeNDAP.ipynb**	_Using pydap an xarray_ it creates a virtually aggregation of 100s of
-OPeNDAP URLs hosted by NASA on premises on the OB.DAAC.
+* **binder/Xarray/*.ipynb **: These tutorials demonstrate access to OPeNDAP data using Xarray and "PyDAP" as the backend engine. To get the most performant access requires extra tricks, and these tutorials cover what is needed to get close to performance access.
 
 ----
 ## **Optional**: Running the notebooks locally
@@ -77,7 +70,7 @@ conda env create -f binder/environment.yml`
 After a few minutes, activate the new environment
 
 ```
-conda activate Earthdata2025`
+conda activate Earthdata2026`
 ```
 
 * Step 3 Starting the local copy of the notebooks
