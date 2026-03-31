@@ -16,10 +16,11 @@ dependencies:
 - scipy
 - xoak
 - xarray = 2026.1
-- pydap = 3.5.9
 - pip:
   - jupyter-contrib-nbextensions
   - ipywidgets 
   - widgetsnbextension
+  - git+https://github.com/pydap/pydap.git
+
 
 
