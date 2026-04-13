@@ -15,6 +15,7 @@ dependencies:
 - pandas
 - scipy
 - xoak
+- pyresample
 - xarray = 2026.1
 - pip:
   - jupyter-contrib-nbextensions
