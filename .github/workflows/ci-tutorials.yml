@@ -47,18 +47,27 @@ jobs:
 
       - name: Test each notebook sequentially
         run: |
-          for file in ./binder/*; do
-              if [[ "$file" == *.ipynb ]]; then
-                  echo "Running notebook \"$file\"..."
-                  jupyter nbconvert --to notebook --execute $file --output executed_notebook.ipynb
-                  if [ $? -eq 0 ]; then
-                      echo "...$file succeeded!"
-                  else
-                      echo "...$file failed"
-                      exit 1
-                  fi
+          NUM_FAILED=0
+          for file in ./binder/*.ipynb; do
+              echo "Running notebook \"$file\"..."
+              jupyter nbconvert --to notebook --execute $file --output executed_notebook.ipynb
+              if [ $? -eq 0 ]; then
+                  echo "...$file succeeded!"
+              else
+                  echo "...$file failed"
+                  ((NUM_FAILED++))
+              fi
 
-                # Clean up!
-                rm ./binder/data/*.nc4
+              # Clean up!
+              for file in ./binder/data/*.nc4; do
+                  rm $file
               fi
           done
+
+          if [[ $NUM_FAILED > 0 ]]; then
+            echo "$NUM_FAILED of $NUM_TOTAL notebooks failed."
+            exit 1
+          else
+            echo "$NUM_TOTAL notebooks succeeded."
+          fi
+
