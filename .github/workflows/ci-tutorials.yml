@@ -27,13 +27,13 @@ jobs:
             conda
           cache-environment: true
 
-      - name: Install job dependencies
+      - name: Install ci dependencies
         run: |
           which python
           python --version
           pip install jupyter nbconvert
 
-      - name: Create credentials file 
+      - name: Create netrc file 
         run: |
           cat <<EOF > $HOME/.netrc
           machine urs.earthdata.nasa.gov
@@ -42,22 +42,37 @@ jobs:
           EOF
           chmod 600 $HOME/.netrc
 
-      - name: Execute CMR notebook (no EDL required)
-        run: |
-          jupyter nbconvert --to notebook --execute binder/CMR_queries.ipynb --output executed_notebook.ipynb
-          if [ $? -eq 0 ]; then
-              echo "Success"
-          else
-              echo "Failed"
-              exit 1
-          fi
+      # - name: Execute CMR notebook (no EDL required)
+      #   run: |
+      #     jupyter nbconvert --to notebook --execute binder/CMR_queries.ipynb --output executed_notebook.ipynb
+      #     if [ $? -eq 0 ]; then
+      #         echo "Success"
+      #     else
+      #         echo "Failed"
+      #         exit 1
+      #     fi
 
-      - name: Execute DAYMET notebook (EDL required)
+      # - name: Execute DAYMET notebook (EDL required)
+      #   run: |
+      #     jupyter nbconvert --to notebook --execute binder/DAYMET.ipynb --output executed_notebook.ipynb
+      #     if [ $? -eq 0 ]; then
+      #         echo "Success"
+      #     else
+      #         echo "Failed"
+      #         exit 1
+      #     fi
+
+      - name: Test each notebook sequentially
         run: |
-          jupyter nbconvert --to notebook --execute binder/DAYMET.ipynb --output executed_notebook.ipynb
-          if [ $? -eq 0 ]; then
-              echo "Success"
-          else
-              echo "Failed"
-              exit 1
-          fi
+          for file in binder; do
+              if [ "$file" == *.ipynb ]; then
+                  echo "Running notebook `$file`..."
+                  jupyter nbconvert --to notebook --execute binder/$file --output executed_notebook.ipynb
+                  if [ $? -eq 0 ]; then
+                      echo "...$file succeeded!"
+                  else
+                      echo "...$file failed"
+                      exit 1
+                  fi
+              fi
+          done
