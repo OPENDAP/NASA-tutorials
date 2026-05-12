@@ -45,7 +45,19 @@ jobs:
       - name: Execute CMR notebook (no EDL required)
         run: |
           jupyter nbconvert --to notebook --execute binder/CMR_queries.ipynb --output executed_notebook.ipynb
+          if [ $? -eq 0 ]; then
+              echo "Success"
+          else
+              echo "Failed"
+              exit 1
+          fi
 
       - name: Execute DAYMET notebook (EDL required)
         run: |
           jupyter nbconvert --to notebook --execute binder/DAYMET.ipynb --output executed_notebook.ipynb
+          if [ $? -eq 0 ]; then
+              echo "Success"
+          else
+              echo "Failed"
+              exit 1
+          fi
