@@ -49,26 +49,30 @@ jobs:
         run: |
           NUM_FAILED=0
           for file in ./binder/*.ipynb; do
-              echo "\n*****************************"
+              echo ""
+              echo "*****************************"
               echo "Running notebook \"$file\"..."
               jupyter nbconvert --to notebook --execute $file --output executed_notebook.ipynb
               if [ $? -eq 0 ]; then
                   echo "...$file succeeded!"
-                  echo "*****************************\n"
               else
                   echo "...$file failed"
                   ((NUM_FAILED++))
-                  echo "*****************************\n"
               fi
 
               # Clean up!
-              for file in ./binder/data/*.nc4; do
-                  rm $file
+              for data_file in ./binder/data/*.nc4; do
+                  rm $data_file
               done
+
+              echo "*****************************"
+              echo ""
           done
 
-          echo "\n*****************************"
-          echo "\n*****************************"
+          echo ""
+          echo "*****************************"
+          echo "*****************************"
+          echo ""
 
           if [[ $NUM_FAILED > 0 ]]; then
             echo "$NUM_FAILED of $NUM_TOTAL notebooks failed."
