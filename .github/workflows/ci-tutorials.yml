@@ -42,30 +42,10 @@ jobs:
           EOF
           chmod 600 $HOME/.netrc
 
-      # - name: Execute CMR notebook (no EDL required)
-      #   run: |
-      #     jupyter nbconvert --to notebook --execute binder/CMR_queries.ipynb --output executed_notebook.ipynb
-      #     if [ $? -eq 0 ]; then
-      #         echo "Success"
-      #     else
-      #         echo "Failed"
-      #         exit 1
-      #     fi
-
-      # - name: Execute DAYMET notebook (EDL required)
-      #   run: |
-      #     jupyter nbconvert --to notebook --execute binder/DAYMET.ipynb --output executed_notebook.ipynb
-      #     if [ $? -eq 0 ]; then
-      #         echo "Success"
-      #     else
-      #         echo "Failed"
-      #         exit 1
-      #     fi
-
       - name: Test each notebook sequentially
         run: |
           for file in binder; do
-              if [ "$file" == *.ipynb ]; then
+              if [[ "$file" == *.ipynb ]]; then
                   echo "Running notebook `$file`..."
                   jupyter nbconvert --to notebook --execute binder/$file --output executed_notebook.ipynb
                   if [ $? -eq 0 ]; then
