@@ -13,6 +13,7 @@ dependencies:
 - tqdm
 - dask
 - pandas
+- notebook < 7.0
 - scipy
 - xoak
 - pyresample
@@ -22,6 +23,3 @@ dependencies:
   - ipywidgets 
   - widgetsnbextension
   - git+https://github.com/pydap/pydap.git
-
-
-
