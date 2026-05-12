@@ -22,6 +22,3 @@ dependencies:
   - ipywidgets 
   - widgetsnbextension
   - git+https://github.com/pydap/pydap.git
-
-
-
