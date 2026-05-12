@@ -11,6 +11,11 @@ on:
     # Run every monday at 7am EST
     - cron: '0 12 * * 1'
 
+concurrency:
+  # Cancel intermediate builds only on pull requests
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
+
 defaults:
   run:
     shell: bash -l {0}
@@ -47,6 +52,7 @@ jobs:
 
       - name: Test each notebook sequentially
         run: |
+          # Loop over all notebooks and count how many fail to complete
           NUM_FAILED=0
           for file in ./binder/*.ipynb; do
               echo ""
