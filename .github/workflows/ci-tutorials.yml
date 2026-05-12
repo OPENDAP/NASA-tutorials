@@ -32,12 +32,19 @@ jobs:
           which python
           python --version
           pip install jupyter nbconvert
-          touch $HOME/.netrc  # TODO-FIX: THIS OBVIOUSLY WILL NOT WORK! :D
+
+      - name: Create credentials file 
+        run: |
+          cat <<EOF > $HOME/.netrc
+          machine urs.earthdata.nasa.gov
+            login ${{ secrets.EDL_USERNAME }}
+            password ${{ secrets.EDL_PASSWORD }}
+          EOF
 
       - name: Execute CMR notebook (no EDL required)
         run: |
           jupyter nbconvert --to notebook --execute binder/CMR_queries.ipynb --output executed_notebook.ipynb
 
-      - name: Execute CMR notebook (EDL required)
+      - name: Execute DAYMET notebook (EDL required)
         run: |
           jupyter nbconvert --to notebook --execute binder/DAYMET.ipynb --output executed_notebook.ipynb
