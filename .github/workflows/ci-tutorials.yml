@@ -67,9 +67,7 @@ jobs:
               fi
 
               # Clean up!
-              for data_file in ./binder/data/*.nc4; do
-                  rm $data_file
-              done
+              rm -f ./binder/data/*.nc4
 
               echo "*****************************"
               echo ""
