@@ -6,6 +6,7 @@ dependencies:
 - numpy
 - python = 3.12
 - netCDF4
+- notebook < 7.0
 - matplotlib
 - jupyterlab
 - cartopy
