@@ -47,7 +47,7 @@ jobs:
 
       - name: Test each notebook sequentially
         run: |
-          for file in binder; do
+          for file in ./binder/*; do
               if [[ "$file" == *.ipynb ]]; then
                   echo "Running notebook `$file`..."
                   jupyter nbconvert --to notebook --execute binder/$file --output executed_notebook.ipynb
