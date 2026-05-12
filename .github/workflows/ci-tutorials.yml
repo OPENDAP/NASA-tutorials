@@ -32,7 +32,7 @@ jobs:
           which python
           python --version
           pip install jupyter nbconvert
-          touch .netrc  # TODO-FIX: THIS OBVIOUSLY WILL NOT WORK! :D
+          touch $HOME/.netrc  # TODO-FIX: THIS OBVIOUSLY WILL NOT WORK! :D
 
       - name: Execute CMR notebook (no EDL required)
         run: |
