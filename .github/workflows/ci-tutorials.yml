@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
     - main
+  schedule:
+    # Run every monday at 7am EST
+    - cron: '0 12 * * 1'
 
 defaults:
   run:
