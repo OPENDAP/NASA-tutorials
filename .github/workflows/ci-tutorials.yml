@@ -35,13 +35,13 @@ jobs:
             conda
           cache-environment: true
 
-      - name: Install ci dependencies
+      - name: Install dependencies for testing
         run: |
           which python
           python --version
           pip install jupyter nbconvert
 
-      - name: Create netrc file 
+      - name: Create EDL .netrc file 
         run: |
           cat <<EOF > $HOME/.netrc
           machine urs.earthdata.nasa.gov
