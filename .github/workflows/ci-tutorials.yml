@@ -40,6 +40,7 @@ jobs:
             login ${{ secrets.EDL_USERNAME }}
             password ${{ secrets.EDL_PASSWORD }}
           EOF
+          chmod 600 $HOME/.netrc
 
       - name: Execute CMR notebook (no EDL required)
         run: |
