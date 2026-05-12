@@ -50,7 +50,7 @@ jobs:
           for file in ./binder/*; do
               if [[ "$file" == *.ipynb ]]; then
                   echo "Running notebook `$file`..."
-                  jupyter nbconvert --to notebook --execute binder/$file --output executed_notebook.ipynb
+                  jupyter nbconvert --to notebook --execute $file --output executed_notebook.ipynb
                   if [ $? -eq 0 ]; then
                       echo "...$file succeeded!"
                   else
