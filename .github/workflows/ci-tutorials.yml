@@ -64,7 +64,7 @@ jobs:
               # Clean up!
               for file in ./binder/data/*.nc4; do
                   rm $file
-              fi
+              done
           done
 
           echo "\n*****************************"
