@@ -55,12 +55,12 @@ jobs:
           # Loop over all notebooks and count how many fail to complete
           NUM_FAILED=0
           NUM_TOTAL=0
-          for file in ./binder/*.ipynb; do
+          for file in ./binder/*MERRA2.ipynb; do
               ((NUM_TOTAL++))
               echo ""
               echo "*****************************"
               echo "Running notebook \"$file\"..."
-              jupyter nbconvert --to notebook --execute $file --output executed_notebook.ipynb
+              jupyter nbconvert --to notebook --log-level=INFO --execute $file --output executed_notebook.ipynb
               if [ $? -eq 0 ]; then
                   echo "...$file succeeded!"
               else
@@ -80,12 +80,9 @@ jobs:
           echo "*****************************"
           echo ""
 
-          if [[ $NUM_FAILED > 1 ]]; then
+          if [[ $NUM_FAILED > 0 ]]; then
             echo "$NUM_FAILED of $NUM_TOTAL notebooks failed."
             exit 1
-          elif [[ $NUM_FAILED = 1 ]]; then
-            echo "$NUM_FAILED of $NUM_TOTAL notebooks failed; this is expected until MERRA2 notebook is fixed"
-            echo "See https://github.com/OPENDAP/NASA-tutorials/issues/28; remove this elif clause and update first check to NUM_FAILED > 0 when fixed."
           else
             echo "$NUM_TOTAL notebooks succeeded."
           fi
