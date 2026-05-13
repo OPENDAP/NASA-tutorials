@@ -1,25 +1,25 @@
 name: Earthdata2026
 channels:
-- conda-forge
+  - conda-forge
 dependencies:
-- pip
-- numpy
-- python = 3.12
-- netCDF4
-- notebook < 7.0
-- matplotlib
-- jupyterlab
-- cartopy
-- earthaccess
-- tqdm
-- dask
-- pandas
-- scipy
-- xoak
-- pyresample
-- xarray = 2026.1
-- pip:
-  - jupyter-contrib-nbextensions
-  - ipywidgets 
-  - widgetsnbextension
-  - git+https://github.com/pydap/pydap.git
+  - python=3.12
+  - pip
+  - libsqlite
+  - numpy
+  - netCDF4
+  - matplotlib
+  - jupyterlab
+  - jupyter_server
+  - jupyterhub-singleuser
+  - cartopy
+  - earthaccess
+  - ipywidgets
+  - tqdm
+  - dask
+  - pandas
+  - scipy
+  - xoak
+  - pyresample
+  - xarray=2026.1
+  - pip:
+      - git+https://github.com/pydap/pydap.git
