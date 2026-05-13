@@ -1,0 +1,92 @@
+name: Test notebooks
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  schedule:
+    # Run every monday at 7am EST
+    - cron: '0 12 * * 1'
+
+concurrency:
+  # Cancel intermediate builds only on pull requests
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+jobs:
+  run-notebook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        
+      - name: Install Conda environment with Micromamba
+        uses: mamba-org/setup-micromamba@v3
+        with:
+          environment-file: binder/environment.yml
+          environment-name: Earthdata2026
+          create-args: >-
+            conda
+          cache-environment: true
+
+      - name: Install dependencies for testing
+        run: |
+          which python
+          python --version
+          pip install jupyter nbconvert
+
+      - name: Create EDL .netrc file 
+        run: |
+          cat <<EOF > $HOME/.netrc
+          machine urs.earthdata.nasa.gov
+            login ${{ secrets.EDL_USERNAME }}
+            password ${{ secrets.EDL_PASSWORD }}
+          EOF
+          chmod 600 $HOME/.netrc
+
+      - name: Test each notebook sequentially
+        run: |
+          # Loop over all notebooks and count how many fail to complete
+          NUM_FAILED=0
+          NUM_TOTAL=0
+          for file in ./binder/*.ipynb; do
+              ((NUM_TOTAL++))
+              echo ""
+              echo "*****************************"
+              echo "Running notebook \"$file\"..."
+              jupyter nbconvert --to notebook --execute $file --output executed_notebook.ipynb
+              if [ $? -eq 0 ]; then
+                  echo "...$file succeeded!"
+              else
+                  echo "...$file failed"
+                  ((NUM_FAILED++))
+              fi
+
+              # Clean up!
+              rm -f ./binder/data/*.nc4
+
+              echo "*****************************"
+              echo ""
+          done
+
+          echo ""
+          echo "*****************************"
+          echo "*****************************"
+          echo ""
+
+          if [[ $NUM_FAILED > 1 ]]; then
+            echo "$NUM_FAILED of $NUM_TOTAL notebooks failed."
+            exit 1
+          elif [[ $NUM_FAILED = 1 ]]; then
+            echo "$NUM_FAILED of $NUM_TOTAL notebooks failed; this is expected until MERRA2 notebook is fixed"
+            echo "See https://github.com/OPENDAP/NASA-tutorials/issues/28; remove this elif clause and update first check to NUM_FAILED > 0 when fixed."
+          else
+            echo "$NUM_TOTAL notebooks succeeded."
+          fi
+

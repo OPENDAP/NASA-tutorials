@@ -52,13 +52,13 @@ $    conda activate
 3. Build the virtual environment for the tutorials
 
 ```
-$    conda env create -f binder/environment.yml`
+$    conda env create -f binder/environment.yml
 ```
 
 4. After a few minutes, activate the new environment
 
 ```
-$    conda activate Earthdata2026`
+$    conda activate Earthdata2026
 ```
 
 5. Run `jupyter lab` and the notebooks will appear in your running/default
