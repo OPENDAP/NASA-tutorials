@@ -12,4 +12,4 @@ stare/pystare/
 ## any data
 *.nc
 *.sqlite
-
+*.nc4
